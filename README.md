@@ -1,4 +1,4 @@
-movies-app-react-redux.vercel.app
+https://movies-app-react-redux.vercel.app
 
 # Getting Started with Create React App
 
