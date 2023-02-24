@@ -1,0 +1,1 @@
+export const selectFilmModal = (state) => state.filmReducer.data;
