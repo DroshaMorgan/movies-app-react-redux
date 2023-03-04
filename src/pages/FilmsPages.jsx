@@ -49,7 +49,7 @@ const FilmsPages = () => {
             <Navbar />
             <FilmList
             />
-            {/* <div className="pagination container">
+            <div className="pagination container">
                 {arrPageCount && arrPageCount.map(pageCurrent =>
                     <a href="#top"
                         onClick={() => changePage(pageCurrent)}
@@ -57,7 +57,7 @@ const FilmsPages = () => {
                         className={[`pagination__el`, `pagination__el-${pageCurrent}`].join(' ')}
                         data-pagination={pageCurrent}>{pageCurrent}</a>)
                 }
-            </div> */}
+            </div>
         </div>
     );
 };
