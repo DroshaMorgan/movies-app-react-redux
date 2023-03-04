@@ -1,12 +1,12 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from "../components/Navbar";
 import FilmList from "../components/FilmList";
-import {useDispatch, useSelector} from "react-redux";
-import {loadFilms, loadSearchFilms, setFilms} from "../store/films/films-actions";
-import {selectFilms} from "../store/films/films-selectors";
-import {setPageCount} from "../store/pagination/pagination-actions";
-import {selectArrPageCount, selectPageCount} from "../store/pagination/pagination-selectors";
-import {selectSearchMovie} from "../store/searchMovie/searchMovie-selectors";
+import { useDispatch, useSelector } from "react-redux";
+import { loadFilms, loadSearchFilms, setFilms } from "../store/films/films-actions";
+import { selectFilms } from "../store/films/films-selectors";
+import { setPageCount } from "../store/pagination/pagination-actions";
+import { selectArrPageCount, selectPageCount } from "../store/pagination/pagination-selectors";
+import { selectSearchMovie } from "../store/searchMovie/searchMovie-selectors";
 
 const FilmsPages = () => {
     const API_KEY = "134870c7-2fa3-414f-b313-805fcae1a058";
@@ -26,9 +26,9 @@ const FilmsPages = () => {
 
 
     const currentSearchQuery = useSelector((state) => state.changeAPIReducer.apiSearch);
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(loadSearchFilms(currentSearchQuery))
-    },[currentSearchQuery])
+    }, [currentSearchQuery])
 
     const filmList = useSelector(selectFilms);
     const currentPagesCount = filmList.pagesCount;
@@ -46,26 +46,18 @@ const FilmsPages = () => {
 
     return (
         <div>
-            {/*{arrPageCount}*/}
-            <Navbar/>
+            <Navbar />
             <FilmList
-                // filmListModal={filmListModal}
-                // showModal={showModal}
-                // filmList={filmList}
-                // showMoviesRating={showMoviesRating}
-                // setActiveModal={setActiveModal}
-                // activeModal={activeModal}
             />
-            <div className="pagination container">
+            {/* <div className="pagination container">
                 {arrPageCount && arrPageCount.map(pageCurrent =>
                     <a href="#top"
-                       onClick={() => changePage(pageCurrent)}
-                       key={pageCurrent}
-                       className={[`pagination__el`, `pagination__el-${pageCurrent}`].join(' ')}
-                       data-pagination={pageCurrent}>{pageCurrent}</a>)
+                        onClick={() => changePage(pageCurrent)}
+                        key={pageCurrent}
+                        className={[`pagination__el`, `pagination__el-${pageCurrent}`].join(' ')}
+                        data-pagination={pageCurrent}>{pageCurrent}</a>)
                 }
-            </div>
-
+            </div> */}
         </div>
     );
 };

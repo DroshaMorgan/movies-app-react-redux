@@ -1,7 +1,7 @@
-import React, {useEffect} from 'react';
-import {Link} from "react-router-dom";
-import {useDispatch} from "react-redux";
-import {changeAPI, changeSearchAPI} from "../store/changeAPI/changeAPI-actions";
+import React, { useEffect } from 'react';
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { changeAPI, changeSearchAPI } from "../store/changeAPI/changeAPI-actions";
 
 
 const Navbar = () => {
@@ -43,17 +43,17 @@ const Navbar = () => {
                 <div className="header__links">
                     <a onClick={() => changeApiLink(API_URL_TOP250)}
                         /*to="/top250"*/ className="header__link header__links-top250">250 лучших фильмов</a>
-                </div>
-                <div className="header__links">
+
+
                     <a onClick={() => changeApiLink(API_URL_POPULAR)}
                         /*to="/popular"*/ className="header__link header__links-popular">Популярные фильмы</a>
-                </div>
-                <div className="header__links">
+
+
                     <a onClick={() => changeApiLink(API_URL_TOP_AWAIT)}
                         /*to="/await"*/ className="header__link header__links-top-await">Самые ожидаемые фильмы</a>
                 </div>
                 <form onSubmit={(e) => searchMovieSubmit(e)} className="header__search-form">
-                    <input type="text" className="header__search" placeholder="Введите фильм"/>
+                    <input type="text" className="header__search" placeholder="Введите фильм" />
                 </form>
             </header>
         </div>

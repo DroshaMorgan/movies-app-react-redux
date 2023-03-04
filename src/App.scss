@@ -66,7 +66,6 @@ body {
 
   background: #5c457aa2;
 
-
   margin-bottom: 30px;
   padding: 0 80px;
 
@@ -92,18 +91,27 @@ body {
     font-size: 20px;
     border-radius: 10px;
     padding: 10px;
+
+    border: none;
+    color: white;
+
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__links {
     font-size: 18px;
-
-
   }
 
   &__link {
     text-decoration: none;
     color: #FFFFFF;
     cursor: pointer;
+    margin-right: 25px;
 
     &-active {
       color: #a86bff;
@@ -114,6 +122,102 @@ body {
     }
   }
 
+  @media (max-width: 1300px) {
+    padding: 0 50px;
+
+    &__title {
+      &-el {
+        font-size: 25px;
+      }
+    }
+
+    &__search {
+      font-size: 20px;
+    }
+
+    &__links {
+      font-size: 16px;
+    }
+
+    &__link {
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 1030px) {
+    padding: 0 25px;
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__link {
+      margin-right: 0;
+      margin-bottom: 5px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    &__title {
+      &-el {
+        font-size: 20px;
+      }
+    }
+
+    &__search {
+      font-size: 18px;
+    }
+
+    &__link {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    padding: 0 10px;
+    height: 160px;
+
+    &__title {
+      &-el {
+        display: none;
+      }
+    }
+
+    &__links {
+      align-items: flex-start;
+    }
+
+    &__link {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    &__search {
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 490px) {
+    flex-direction: column;
+
+    &__links {
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    &__link {
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    &__search {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+  }
 }
 
 .content {
@@ -128,6 +232,18 @@ body {
   justify-content: center;
   padding: 20px;
   box-sizing: border-box;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(3, minmax(auto, 270px));
+  }
+
+  @media (max-width: 910px) {
+    grid-template-columns: repeat(2, minmax(auto, 270px));
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, minmax(auto, 270px));
+  }
 }
 
 .movie-block {
@@ -264,6 +380,7 @@ body {
     display: flex;
   }
 }
+
 //
 //.modal-block.active {
 //  display: flex;
@@ -398,4 +515,3 @@ body {
     cursor: pointer;
   }
 }
-
