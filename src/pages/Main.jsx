@@ -11,7 +11,6 @@ const Main = () => {
                     <div className="main-bcg__info-block-top">Вся доступная информация о фильмах - здесь!
                     </div>
                     <Link  to="/films" className="main-bcg__info-block-middle">Начать</Link>
-                    {/*<div className="main-bcg__info-block-bottom">Используется</div>*/}
                 </div>
             </div>
         </div>

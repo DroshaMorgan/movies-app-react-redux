@@ -1,10 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,100;1,400&family=Quicksand&family=Roboto&display=swap');
 
 body {
   font-family: Quicksand, Arial, Helvetica, sans-serif;
 
-  background: linear-gradient(90deg, #4d4459 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475F66 80.65%);
+  // background: linear-gradient(90deg, #4d4459 14.64%, rgba(0, 0, 0, 0.7) 47.07%, #475F66 80.65%);
+  // background: #4d4459;
+}
 
+body {
+  @apply bg-purple-bg;
 }
 
 .container {
@@ -18,7 +26,6 @@ body {
   background-image: url(./Top250.jpg);
   background-position: center;
   background-size: cover;
-  // filter: blur(10px);
 
   &__blackout {
     min-height: 100vh;
@@ -59,6 +66,10 @@ body {
     }
   }
 }
+
+// .header__title-el{
+//  @apply text-red-500;
+// }
 
 .header {
   height: 100px;
@@ -112,10 +123,6 @@ body {
     color: #FFFFFF;
     cursor: pointer;
     margin-right: 25px;
-
-    &-active {
-      color: #a86bff;
-    }
 
     &:hover {
       color: #d2b2ff;
@@ -358,11 +365,9 @@ body {
 }
 
 
-
 .false {
   display: none;
 }
-
 
 
 .modal-block {
@@ -381,10 +386,6 @@ body {
   }
 }
 
-//
-//.modal-block.active {
-//  display: flex;
-//}
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
@@ -398,7 +399,6 @@ body {
   display: flex;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   flex-direction: column;
-  // justify-content: space-between;
   align-items: center;
   max-width: 1000px;
   min-height: 500px;
@@ -408,13 +408,11 @@ body {
   font-size: 20px;
   line-height: 20px;
 
-  background: linear-gradient(315deg, #4d4459 14.64%, rgb(60, 60, 60) 47.07%, #475F66 80.65%);
+  background: #4d4459;
 
   margin: auto;
   padding: 20px;
   box-sizing: border-box;
-
-
 
   &__img {
     width: 150px;
@@ -471,14 +469,9 @@ body {
 
     &-genre {
       margin-bottom: 10px;
-      // letter-spacing: 20px;
-      // line-height: 25px;
     }
 
     &-description {
-      // margin-bottom: 10px;
-      // letter-spacing: 1px;
-      // line-height: 23px;
       font-size: 18px;
 
       @media (max-width: 1200px) {
@@ -507,7 +500,6 @@ body {
   color: red;
 }
 
-
 .pagination {
   display: flex;
   flex-wrap: wrap;
@@ -522,4 +514,12 @@ body {
     font-size: 24px;
     cursor: pointer;
   }
+}
+
+.top250{
+  color: #c69efffd;
+}
+
+.active-pagination{
+  color: #c69efffd;
 }
