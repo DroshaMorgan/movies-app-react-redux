@@ -1,1 +1,1 @@
-// export const selectChanges = (state) => state.paginationReducer;
+export const selectChanges = (state) => state.paginationReducer;

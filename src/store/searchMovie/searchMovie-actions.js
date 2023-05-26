@@ -8,13 +8,3 @@ export const setSearchMovie = (movie) => ({
     type: SET_SEARCH_MOVIE,
     payload: movie
 })
-
-
-// export const loadSearchMovie = (searchKeyWord) => (dispatch) => {
-//     axios.get(API_URL_SEARCH + searchKeyWord, {
-//         headers:{
-//             'X-API-KEY': API_KEY,
-//         }
-//     })
-//         .then(({data}) => dispatch(setSearchMovie(data)))
-// }
